@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.formulario input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.formulario button,
+.acoes button,
+.lista-item button {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.formulario button {
+  padding: 12px 16px;
+  background: #2d89ef;
+  color: white;
+}
+
+.formulario button:hover {
+  opacity: 0.9;
+}
+
+.acoes {
+  margin-bottom: 15px;
+}
+
+.btn-limpar {
+  width: 100%;
+  padding: 12px;
+  background: #d9534f;
+  color: white;
+}
+
+.btn-limpar:hover {
+  opacity: 0.9;
+}
+
+#listaTarefas {
+  list-style: none;
+}
+
+.lista-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: #f9f9f9;
+  padding: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.lista-item span {
+  flex: 1;
+  color: #333;
+}
+
+.btn-remover {
+  background: #ff4d4f;
+  color: white;
+  padding: 8px 12px;
+}
+
+.btn-remover:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+  .formulario {
+    flex-direction: column;
+  }
+
+  .formulario button {
+    width: 100%;
+  }
+
+  .lista-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-remover {
+    width: 100%;
+  }
+}
