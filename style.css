@@ -1,3 +1,12 @@
+:root {
+  --cor-primaria: #21883d;
+  --cor-secundaria: #f7f8fa;
+  --cor-fundo-navbar: #f7f8fa;
+  --cor-fundo: #ffffff;
+  --cor-texto: #3d4f5c;
+  --fonte-principal: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,19 +14,20 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  font-family: var(--fonte-principal);
+  background: var(--cor-secundaria);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  color: var(--cor-texto);
 }
 
 .container {
   width: 100%;
   max-width: 500px;
-  background: #ffffff;
+  background: var(--cor-fundo);
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
@@ -26,7 +36,6 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #222;
 }
 
 .formulario {
@@ -43,23 +52,13 @@ h1 {
   font-size: 14px;
 }
 
-.formulario button,
-.acoes button,
-.lista-item button {
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: 0.2s;
-}
-
 .formulario button {
   padding: 12px 16px;
-  background: #2d89ef;
-  color: white;
-}
-
-.formulario button:hover {
-  opacity: 0.9;
+  background: var(--cor-primaria);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .acoes {
@@ -70,45 +69,56 @@ h1 {
   width: 100%;
   padding: 12px;
   background: #d9534f;
-  color: white;
-}
-
-.btn-limpar:hover {
-  opacity: 0.9;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 #listaTarefas {
   list-style: none;
 }
 
+/* ITEM DA LISTA */
 .lista-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
-  background: #f9f9f9;
+
+  background: var(--cor-secundaria);
   padding: 12px;
-  border: 1px solid #e5e5e5;
   border-radius: 8px;
   margin-bottom: 10px;
+}
+
+/* TEXTO */
+.lista-item span {
+  flex: 1;
+  color: var(--cor-texto);
   word-break: break-word;
 }
 
-.lista-item span {
-  flex: 1;
-  color: #333;
-}
-
+/* BOTÃO X */
 .btn-remover {
-  background: #ff4d4f;
-  color: white;
-  padding: 8px 12px;
+  background: var(--cor-primaria);
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: 12px;
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  cursor: pointer;
 }
 
-.btn-remover:hover {
-  opacity: 0.9;
-}
-
+/* RESPONSIVO */
 @media (max-width: 480px) {
   .formulario {
     flex-direction: column;
@@ -118,12 +128,8 @@ h1 {
     width: 100%;
   }
 
+  /* mantém linha no mobile */
   .lista-item {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .btn-remover {
-    width: 100%;
+    flex-direction: row;
   }
 }
