@@ -1,13 +1,15 @@
-# To-Do List
-
+### To-Do List
 Aplicação web simples para gerenciar tarefas usando localStorage.
+Link: https://oliveira-iago-temp.github.io/umc-lista-tarefas/
 
-## Tecnologias
+#
+### Tecnologias
 - HTML
 - CSS
 - JavaScript
 
-## Funcionalidades
+#
+### Funcionalidades
 - Adicionar tarefa
 - Remover tarefa
 - Limpar todas as tarefas
