@@ -26,7 +26,7 @@ function renderizarTarefas() {
     span.textContent = tarefa;
 
     const botaoRemover = document.createElement("button");
-    botaoRemover.textContent = "Remover";
+    botaoRemover.textContent = "X";
     botaoRemover.classList.add("btn-remover");
 
     // Remove a tarefa clicada
