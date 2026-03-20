@@ -4,6 +4,7 @@
   --cor-fundo-navbar: #f7f8fa;
   --cor-fundo: #ffffff;
   --cor-texto: #3d4f5c;
+  --cor-vermelha: #d9534f;
   --fonte-principal: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
@@ -68,7 +69,7 @@ h1 {
 .btn-limpar {
   width: 100%;
   padding: 12px;
-  background: #d9534f;
+  background: var(--cor-vermelha);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -101,7 +102,7 @@ h1 {
 
 /* BOTÃO X */
 .btn-remover {
-  background: var(--cor-primaria);
+  background: var(--cor-vermelha);
   color: #fff;
   width: 24px;
   height: 24px;
